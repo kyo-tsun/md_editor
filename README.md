@@ -9,6 +9,17 @@
 - 箇条書きの自動継続（Enter）
 - Tabキーでインデント挿入
 
+## アーキテクチャ
+
+```
+┌──────────┐     HTTPS     ┌────────────┐     OAC     ┌──────────┐
+│  ブラウザ  │ ──────────▶ │ CloudFront │ ─────────▶ │    S3    │
+└──────────┘              └────────────┘            └──────────┘
+                                                     index.html
+                                                     style.css
+                                                     app.js
+```
+
 ## 技術スタック
 
 - フロントエンド: HTML / CSS / JavaScript + [marked.js](https://github.com/markedjs/marked) + [mermaid.js](https://github.com/mermaid-js/mermaid)
