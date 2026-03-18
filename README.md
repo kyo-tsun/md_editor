@@ -11,13 +11,11 @@
 
 ## アーキテクチャ
 
-```
-┌──────────┐     HTTPS     ┌────────────┐     OAC     ┌──────────┐
-│  ブラウザ  │ ──────────▶ │ CloudFront │ ─────────▶ │    S3    │
-└──────────┘              └────────────┘            └──────────┘
-                                                     index.html
-                                                     style.css
-                                                     app.js
+```mermaid
+graph LR
+    Browser[ブラウザ] -->|HTTPS| CF[CloudFront]
+    CF -->|OAC| S3[S3 Bucket]
+    S3 --- Files["index.html\nstyle.css\napp.js"]
 ```
 
 ## 技術スタック
