@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 16px;
+  background: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.editor-container {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+}
+
+.pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.pane h2 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+#editor {
+  flex: 1;
+  padding: 12px;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  resize: none;
+  outline: none;
+  line-height: 1.6;
+}
+
+#editor:focus {
+  border-color: #4a9eff;
+}
+
+.preview {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  overflow-y: auto;
+  line-height: 1.7;
+}
+
+.preview h1 { font-size: 1.8em; margin: 0.6em 0 0.3em; }
+.preview h2 { font-size: 1.4em; margin: 0.6em 0 0.3em; }
+.preview h3 { font-size: 1.1em; margin: 0.6em 0 0.3em; }
+
+.mermaid-placeholder svg {
+  max-width: 100%;
+}
+
+.preview p {
+  margin: 0.4em 0;
+}
+
+.preview code {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.preview pre {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.preview pre code {
+  background: none;
+  padding: 0;
+}
+
+.preview blockquote {
+  border-left: 3px solid #ddd;
+  padding-left: 12px;
+  color: #666;
+  margin: 0.4em 0;
+}
+
+.preview ul, .preview ol {
+  padding-left: 1.5em;
+  margin: 0.4em 0;
+}
+
+.preview a {
+  color: #4a9eff;
+}
