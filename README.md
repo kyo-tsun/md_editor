@@ -1,14 +1,29 @@
-# Welcome to your CDK TypeScript project
+# Markdown Editor
 
-This is a blank project for CDK development with TypeScript.
+ブラウザで動くシンプルなマークダウンエディター。左右分割のリアルタイムプレビュー付き。
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## 機能
 
-## Useful commands
+- マークダウンのリアルタイムプレビュー
+- Mermaid図のプレビュー
+- 箇条書きの自動継続（Enter）
+- Tabキーでインデント挿入
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+## 技術スタック
+
+- フロントエンド: HTML / CSS / JavaScript + [marked.js](https://github.com/markedjs/marked) + [mermaid.js](https://github.com/mermaid-js/mermaid)
+- インフラ: AWS CDK (TypeScript) - S3 + CloudFront
+
+## デプロイ
+
+```bash
+npm install
+npx cdk bootstrap   # 初回のみ
+npx cdk deploy
+```
+
+デプロイ完了後、出力される URL にアクセスしてください。
+
+## ローカル確認
+
+`frontend/index.html` をブラウザで直接開けば動作確認できます。
