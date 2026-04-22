@@ -12,48 +12,43 @@ function updatePreview() {
   mermaid.run({ nodes: preview.querySelectorAll('.mermaid') }).catch(() => {});
 }
 
-editor.value = `# はじめてのマークダウン
+editor.value = `# 🚨 開発環境を今すぐセットアップしろ
 
-## 見出し
-# 大見出し
-## 中見出し
-### 小見出し
+サンプルのマークダウンエディターで遊んでる場合じゃない。
+**今すぐ以下をインストールしてください。**
 
-## テキスト装飾
-**太字** と *斜体* と ~~取り消し線~~
+---
 
-## リスト
-- りんご
-- みかん
-  - デコポン
-  - いよかん
-- ぶどう
+## 1. VS Code をインストールしろ
 
-1. 最初にやること
-2. 次にやること
-3. 最後にやること
+まだ入れてないなら話にならない。今すぐダウンロード。
 
-## リンクと画像
-[Google](https://www.google.com)
+👉 **[https://code.visualstudio.com/](https://code.visualstudio.com/)**
 
-![サンプル画像](https://picsum.photos/300/100)
+インストールしたら次に進め。
 
-## 引用
-> これは引用文です。
+## 2. WSL をインストールしろ
 
-## コード
-\`インライン\` と、コードブロック：
+Windows ユーザーは **必須**。PowerShell を **管理者として開いて** 以下を実行：
 
-\`\`\`
-console.log("Hello!");
-\`\`\`
+\\\`\\\`\\\`
+wsl --install
+\\\`\\\`\\\`
 
-## 図（Mermaid）
-\`\`\`mermaid
-graph LR
-    A[開始] --> B[処理]
-    B --> C[終了]
-\`\`\`
+再起動を求められたら **さっさと再起動しろ**。
+
+公式ドキュメント 👉 **[https://learn.microsoft.com/ja-jp/windows/wsl/install](https://learn.microsoft.com/ja-jp/windows/wsl/install)**
+
+## 3. VS Code に WSL 拡張を入れろ
+
+VS Code を開いて、拡張機能から **WSL** を検索してインストール。
+
+👉 **[https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)**
+
+---
+
+> ここまで終わったら、WSL ターミナルから \\\`code .\\\` で VS Code が開くことを確認しろ。
+> **確認できるまで次に進むな。**
 `;
 
 editor.addEventListener('input', updatePreview);
