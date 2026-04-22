@@ -45,9 +45,19 @@ VS Code を開いて、拡張機能から **WSL** を検索してインストー
 
 👉 **[https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)**
 
+## 4. Kiro CLI をインストールしろ
+
+AIの力を借りずに開発する時代は終わった。WSL ターミナルで以下を実行：
+
+\\\`\\\`\\\`
+curl -fsSL https://kiro.dev/install.sh | bash
+\\\`\\\`\\\`
+
+公式サイト 👉 **[https://kiro.dev/](https://kiro.dev/)**
+
 ---
 
-> ここまで終わったら、WSL ターミナルから \\\`code .\\\` で VS Code が開くことを確認しろ。
+> ここまで **全部** 終わったら、WSL ターミナルから \\\`code .\\\` と \\\`kiro\\\` が動くことを確認しろ。
 > **確認できるまで次に進むな。**
 `;
 
